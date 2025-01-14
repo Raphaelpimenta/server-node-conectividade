@@ -45,7 +45,7 @@ const { createServer } = require('http');
 const WebSocket = require('ws');
 
 const app = express();
-const port = 8080; // Porta local onde o servidor estará escutando
+const port = process.env.PORT || 8080; // Porta local onde o servidor estará escutando
 
 // Cria o servidor HTTP e WebSocket
 const server = createServer(app);
